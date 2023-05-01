@@ -19,7 +19,9 @@ export default function RootLayout({
             <nav>
               <ul>
                 <li>
-                  <Link href="/">emailaddress.horse</Link>
+                  <Link href="/" className="text-main-11">
+                    emailaddress.horse
+                  </Link>
                 </li>
               </ul>
             </nav>
@@ -31,7 +33,12 @@ export default function RootLayout({
             <nav>
               <ul>
                 <li>
-                  <Link href="https://github.com/jdbann">GitHub</Link>
+                  <Link
+                    href="https://github.com/jdbann"
+                    className="text-main-11"
+                  >
+                    GitHub
+                  </Link>
                 </li>
               </ul>
             </nav>

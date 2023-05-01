@@ -2,14 +2,14 @@ export default function Home() {
   return (
     <>
       <hgroup className="space-y-2">
-        <h1 className="text-4xl">
+        <h1 className="text-4xl text-base-12">
           email
           <wbr />
           address
           <wbr />
           .horse
         </h1>
-        <h2 className="text-xl">Nonsense from John Bannister</h2>
+        <h2 className="text-xl text-base-12">Nonsense from John Bannister</h2>
       </hgroup>
 
       <p>
