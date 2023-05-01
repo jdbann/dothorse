@@ -37,6 +37,7 @@ module.exports = {
       },
     },
     fontFamily: {
+      sans: "var(--font-ibm-plex-sans)",
       serif: [
         "var(--font-fraunces)",
         { fontVariationSettings: `"SOFT" 100, "WONK" 1` },

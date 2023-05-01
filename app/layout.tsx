@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Fraunces } from "next/font/google";
+import { Fraunces, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -17,6 +17,29 @@ const fraunces = Fraunces({
   variable: "--font-fraunces",
 });
 
+const ibm_plex_sans = IBM_Plex_Sans({
+  fallback: [
+    "ui-sans-serif",
+    "system-ui",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue",
+    "Arial",
+    "Noto Sans",
+    "sans-serif",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji",
+  ],
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  variable: "--font-ibm-plex-sans",
+  weight: ["400"],
+});
+
 export const metadata = {
   title: "emailaddress.horse",
   description: "Nonsense from John Bannister",
@@ -28,7 +51,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable}`}>
+    <html
+      lang="en"
+      className={`${fraunces.variable} ${ibm_plex_sans.variable}`}
+    >
       <body className="bg-main-2 text-base-11">
         <div className="flex flex-col min-h-screen p-4 space-y-8">
           <header className="text-sm">
