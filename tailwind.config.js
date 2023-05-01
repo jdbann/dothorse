@@ -36,6 +36,12 @@ module.exports = {
         12: "#101d46",
       },
     },
+    fontFamily: {
+      serif: [
+        "var(--font-fraunces)",
+        { fontVariationSettings: `"SOFT" 100, "WONK" 1` },
+      ],
+    },
   },
   plugins: [],
 };
