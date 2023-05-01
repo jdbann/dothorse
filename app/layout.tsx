@@ -13,8 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <header>
+      <body className="bg-main-2 text-base-11 p-4 space-y-8">
+        <header className="text-sm">
           <nav>
             <ul>
               <li>
@@ -26,7 +26,7 @@ export default function RootLayout({
 
         {children}
 
-        <footer>
+        <footer className="text-sm">
           <nav>
             <ul>
               <li>

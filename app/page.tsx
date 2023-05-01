@@ -1,15 +1,15 @@
 export default function Home() {
   return (
-    <main>
-      <hgroup>
-        <h1>
+    <main className="space-y-4">
+      <hgroup className="space-y-2">
+        <h1 className="text-4xl">
           email
           <wbr />
           address
           <wbr />
           .horse
         </h1>
-        <h2>Nonsense from John Bannister</h2>
+        <h2 className="text-xl">Nonsense from John Bannister</h2>
       </hgroup>
 
       <p>
