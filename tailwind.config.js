@@ -6,6 +6,39 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            "--tw-prose-body": theme("colors.base[11]"),
+            "--tw-prose-headings": theme("colors.base[12]"),
+            "--tw-prose-lead": theme("colors.base[12]"),
+            "--tw-prose-links": theme("colors.main[11]"),
+            "--tw-prose-bold": theme("colors.base[12]"),
+            "--tw-prose-counters": theme("colors.base[11]"),
+            "--tw-prose-bullets": theme("colors.main[9]"),
+            "--tw-prose-hr": theme("colors.main[6]"),
+            "--tw-prose-quotes": theme("colors.main[11]"),
+            "--tw-prose-quote-borders": theme("colors.main[6]"),
+            "--tw-prose-captions": theme("colors.base[11]"),
+            "--tw-prose-code": theme("colors.base[12]"),
+            "--tw-prose-pre-code": theme("colors.main[11]"),
+            "--tw-prose-pre-bg": theme("colors.main[2]"),
+            "--tw-prose-th-borders": theme("colors.main[8]"),
+            "--tw-prose-td-borders": theme("colors.main[6]"),
+            "h1, h2, h3, h4, h5, h6": {
+              "@apply font-serif": {},
+            },
+            h1: {
+              fontWeight: 600,
+            },
+            "h1 strong": {
+              fontWeight: 700,
+            },
+          },
+        },
+      }),
+    },
     colors: {
       base: {
         1: "#fbfcfd",
@@ -44,5 +77,5 @@ module.exports = {
       ],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
