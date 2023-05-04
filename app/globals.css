@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --indigo-1: hsl(225, 60%, 99.4%);
+    --indigo-2: hsl(223, 100%, 98.6%);
+    --indigo-3: hsl(223, 98.4%, 97.1%);
+    --indigo-4: hsl(223, 92.9%, 95%);
+    --indigo-5: hsl(224, 87.1%, 92%);
+    --indigo-6: hsl(224, 81.9%, 87.8%);
+    --indigo-7: hsl(225, 77.4%, 82.1%);
+    --indigo-8: hsl(226, 75.4%, 74.5%);
+    --indigo-9: hsl(226, 70%, 55.5%);
+    --indigo-10: hsl(226, 58.6%, 51.3%);
+    --indigo-11: hsl(226, 55%, 45%);
+    --indigo-12: hsl(226, 62%, 17%);
+
+    --slate-1: hsl(206, 30%, 98.8%);
+    --slate-2: hsl(210, 16.7%, 97.6%);
+    --slate-3: hsl(209, 13.3%, 95.3%);
+    --slate-4: hsl(209, 12.2%, 93.2%);
+    --slate-5: hsl(208, 11.7%, 91.1%);
+    --slate-6: hsl(208, 11.3%, 88.9%);
+    --slate-7: hsl(207, 11.1%, 85.9%);
+    --slate-8: hsl(205, 10.7%, 78%);
+    --slate-9: hsl(206, 6%, 56.1%);
+    --slate-10: hsl(206, 5.8%, 52.3%);
+    --slate-11: hsl(206, 6%, 43.5%);
+    --slate-12: hsl(206, 24%, 9%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --indigo-1: hsl(229, 24%, 10%);
+      --indigo-2: hsl(230, 36.4%, 12.9%);
+      --indigo-3: hsl(228, 43.3%, 17.5%);
+      --indigo-4: hsl(227, 47.2%, 21%);
+      --indigo-5: hsl(227, 50%, 24.1%);
+      --indigo-6: hsl(226, 52.9%, 28.2%);
+      --indigo-7: hsl(226, 56%, 34.5%);
+      --indigo-8: hsl(226, 58.2%, 44.1%);
+      --indigo-9: hsl(226, 70%, 55.5%);
+      --indigo-10: hsl(227, 75.2%, 61.6%);
+      --indigo-11: hsl(228, 100%, 75.9%);
+      --indigo-12: hsl(226, 83%, 96.3%);
+
+      --slate-1: hsl(200, 7%, 8.8%);
+      --slate-2: hsl(195, 7.1%, 11%);
+      --slate-3: hsl(197, 6.8%, 13.6%);
+      --slate-4: hsl(198, 6.6%, 15.8%);
+      --slate-5: hsl(199, 6.4%, 17.9%);
+      --slate-6: hsl(201, 6.2%, 20.5%);
+      --slate-7: hsl(203, 6%, 24.3%);
+      --slate-8: hsl(207, 5.6%, 31.6%);
+      --slate-9: hsl(206, 6%, 43.9%);
+      --slate-10: hsl(206, 5.2%, 49.5%);
+      --slate-11: hsl(206, 6%, 63%);
+      --slate-12: hsl(210, 6%, 93%);
+    }
+  }
+}
