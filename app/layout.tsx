@@ -1,44 +1,6 @@
 import Link from "next/link";
-import { Fraunces, IBM_Plex_Sans } from "next/font/google";
+import { fonts } from "./fonts";
 import "./globals.css";
-
-const fraunces = Fraunces({
-  axes: ["SOFT", "WONK", "opsz"],
-  fallback: [
-    "ui-serif",
-    "Georgia",
-    "Cambria",
-    "Times New Roman",
-    "Times",
-    "serif",
-  ],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-});
-
-const ibm_plex_sans = IBM_Plex_Sans({
-  fallback: [
-    "ui-sans-serif",
-    "system-ui",
-    "-apple-system",
-    "BlinkMacSystemFont",
-    "Segoe UI",
-    "Roboto",
-    "Helvetica Neue",
-    "Arial",
-    "Noto Sans",
-    "sans-serif",
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji",
-  ],
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  variable: "--font-ibm-plex-sans",
-  weight: ["400"],
-});
 
 export const metadata = {
   title: "emailaddress.horse",
@@ -53,7 +15,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${ibm_plex_sans.variable}`}
+      className={`${fonts.map((font) => font.variable).join(" ")}`}
     >
       <body className="bg-main-2 text-base-11">
         <div className="flex flex-col min-h-screen p-4 space-y-8 max-w-4xl mx-auto">
