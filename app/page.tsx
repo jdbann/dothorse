@@ -9,7 +9,7 @@ export default function Home() {
           <wbr />
           .horse
         </h1>
-        <p className="lead">Nonsense from John Bannister</p>
+        <p className="lead">Nonsense from John Bannister.</p>
       </hgroup>
 
       <p>

@@ -60,4 +60,49 @@
       --slate-12: hsl(210, 6%, 93%);
     }
   }
+
+  html {
+    @apply bg-main-1 text-base-11;
+  }
+
+  body {
+    @apply text-0;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    @apply max-w-prose;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-serif leading-[1.2] text-base-12;
+  }
+
+  h1 {
+    @apply text-4 font-semibold;
+  }
+
+  h2 {
+    @apply mb-2xs mt-m text-2 font-medium;
+  }
+
+  hgroup {
+    @apply mb-m;
+  }
+
+  hgroup h1 + p {
+    @apply mt-3xs text-1 italic;
+  }
+
+  p + p {
+    @apply mt-xs;
+  }
+
+  a {
+    @apply text-main-11 hover:underline active:text-main-12 aria-current:text-main-12 aria-current:active:text-main-11;
+  }
 }

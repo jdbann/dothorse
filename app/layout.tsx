@@ -17,32 +17,25 @@ export default function RootLayout({
       lang="en"
       className={`${fonts.map((font) => font.variable).join(" ")}`}
     >
-      <body className="bg-main-2 text-base-11">
-        <div className="flex flex-col min-h-screen p-4 space-y-8 max-w-4xl mx-auto">
-          <header className="text-sm">
+      <body>
+        <div className="flex flex-col min-h-screen container py-s">
+          <header className="-text-1">
             <nav>
               <ul>
                 <li>
-                  <Link href="/" className="text-main-11">
-                    emailaddress.horse
-                  </Link>
+                  <Link href="/">emailaddress.horse</Link>
                 </li>
               </ul>
             </nav>
           </header>
 
-          <main className="flex-grow">{children}</main>
+          <main className="my-xl">{children}</main>
 
-          <footer className="text-sm">
+          <footer className="-text-1 mt-auto">
             <nav>
               <ul>
                 <li>
-                  <Link
-                    href="https://github.com/jdbann"
-                    className="text-main-11"
-                  >
-                    GitHub
-                  </Link>
+                  <Link href="https://github.com/jdbann">GitHub</Link>
                 </li>
               </ul>
             </nav>

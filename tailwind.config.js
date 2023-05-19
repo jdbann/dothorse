@@ -6,6 +6,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: { aria: { current: `current="page"` } },
     colors: {
       base: {
         1: "var(--slate-1)",
@@ -44,5 +45,6 @@ module.exports = {
       ],
     },
   },
-  plugins: [],
+  corePlugins: { container: false },
+  plugins: [require("./lib/utopiaPlugin")],
 };
