@@ -31,7 +31,7 @@ export default function RootLayout({
             </nav>
           </header>
 
-          <main className="flex-grow prose">{children}</main>
+          <main className="flex-grow">{children}</main>
 
           <footer className="text-sm">
             <nav>
