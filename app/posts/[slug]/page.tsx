@@ -1,29 +1,30 @@
 import { Time } from "@/components/Time";
+import { allPosts } from "contentlayer/generated";
+import { notFound } from "next/navigation";
 
 export default function PostPage({
   params: { slug },
 }: {
   params: { slug: string };
 }) {
-  const publishedAt = new Date();
+  const post = allPosts.find((post) => post._raw.flattenedPath === slug);
+
+  if (!post) notFound();
 
   return (
     <article>
       <hgroup>
-        <h1>Post title</h1>
-        <p className="lead">The lead line for the post is shown.</p>
+        <h1>{post.title}</h1>
+        <p className="lead">{post.lead}</p>
         <dl className="-text-1 italic cluster gap-3xs mt-3xs">
           <dt>Published:</dt>
           <dd>
-            <Time dateTime={publishedAt} />
+            <Time dateTime={post.publishedAt} />
           </dd>
         </dl>
       </hgroup>
 
-      <p>
-        And then we will the rest of the page with the actual contents of the
-        post.
-      </p>
+      <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
     </article>
   );
 }

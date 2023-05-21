@@ -62,7 +62,7 @@
   }
 
   html {
-    @apply bg-main-1 text-base-11;
+    @apply bg-main-1 text-base-11 leading-[1.75];
   }
 
   body {
@@ -95,7 +95,7 @@
   }
 
   p + p {
-    @apply mt-xs;
+    @apply mt-m;
   }
 
   a {
