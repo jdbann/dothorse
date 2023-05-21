@@ -94,15 +94,21 @@
     @apply mb-m;
   }
 
-  hgroup h1 + p {
-    @apply mt-3xs text-1 italic;
-  }
-
   p + p {
     @apply mt-xs;
   }
 
   a {
     @apply text-main-11 hover:underline active:text-main-12 aria-current:text-main-12 aria-current:active:text-main-11;
+  }
+}
+
+@layer components {
+  .cluster {
+    @apply flex flex-wrap gap-s;
+  }
+
+  .lead {
+    @apply mt-3xs text-1 italic;
   }
 }
