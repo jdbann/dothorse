@@ -21,9 +21,12 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen container py-s">
           <header className="-text-1">
             <nav>
-              <ul>
+              <ul className="cluster gap-xs">
                 <li>
                   <Link href="/">emailaddress.horse</Link>
+                </li>
+                <li>
+                  <Link href="/posts">Posts</Link>
                 </li>
               </ul>
             </nav>
