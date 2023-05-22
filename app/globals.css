@@ -62,7 +62,7 @@
   }
 
   html {
-    @apply bg-main-1 text-base-11 leading-[1.75];
+    @apply bg-main-2 text-base-11 leading-[1.75];
   }
 
   body {
