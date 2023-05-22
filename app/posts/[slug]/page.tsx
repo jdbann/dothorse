@@ -2,18 +2,30 @@ import { Time } from "@/components/Time";
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 
-export async function generateStaticParams() {
-  return allPosts.map(({ slug }) => ({ slug }));
-}
-
-export default function PostPage({
-  params: { slug },
-}: {
+type Props = {
   params: { slug: string };
-}) {
+};
+
+function findPost({ params: { slug } }: Props) {
   const post = allPosts.find((post) => post.slug === slug);
 
   if (!post) notFound();
+
+  return post;
+}
+
+export function generateMetadata(props: Props) {
+  const post = findPost(props)!;
+
+  return { title: post.title, description: post.lead };
+}
+
+export function generateStaticParams(): Props["params"][] {
+  return allPosts.map(({ slug }) => ({ slug }));
+}
+
+export default function PostPage(props: Props) {
+  const post = findPost(props);
 
   return (
     <article>

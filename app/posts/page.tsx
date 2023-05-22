@@ -2,6 +2,10 @@ import { allPosts } from "contentlayer/generated";
 import { Time } from "@/components/Time";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Posts",
+};
+
 export default function PostsPage() {
   return (
     <article>

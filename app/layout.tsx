@@ -4,8 +4,11 @@ import { fonts } from "./fonts";
 import "./globals.css";
 
 export const metadata = {
-  title: "emailaddress.horse",
-  description: "Nonsense from John Bannister",
+  title: {
+    default: "emailaddress.horse",
+    template: "%s - emailaddress.horse",
+  },
+  description: "Nonsense from John Bannister.",
 };
 
 export default function RootLayout({
