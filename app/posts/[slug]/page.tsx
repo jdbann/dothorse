@@ -2,12 +2,16 @@ import { Time } from "@/components/Time";
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 
+export async function generateStaticParams() {
+  return allPosts.map(({ slug }) => ({ slug }));
+}
+
 export default function PostPage({
   params: { slug },
 }: {
   params: { slug: string };
 }) {
-  const post = allPosts.find((post) => post._raw.flattenedPath === slug);
+  const post = allPosts.find((post) => post.slug === slug);
 
   if (!post) notFound();
 
