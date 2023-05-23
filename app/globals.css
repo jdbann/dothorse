@@ -72,7 +72,9 @@
   h1,
   h2,
   h3,
-  p {
+  p,
+  blockquote,
+  pre {
     @apply max-w-prose;
   }
 
@@ -98,8 +100,37 @@
     @apply mt-m;
   }
 
+  blockquote {
+    @apply italic border-l-8 border-base-6 my-l pl-s;
+    quotes: "\\201C""\\201D""\\2018""\\2019";
+  }
+
+  blockquote p:first-of-type::before {
+    content: open-quote;
+  }
+
+  blockquote p:last-of-type::after {
+    content: close-quote;
+  }
+
+  pre {
+    @apply bg-base-3 my-m px-s py-2xs rounded-2xs overflow-x-scroll box-border;
+  }
+
+  pre > code {
+    @apply -text-1 bg-revert m-none p-none  before:content-none after:content-none font-normal;
+  }
+
   a {
     @apply text-main-11 hover:underline active:text-main-12 aria-current:text-main-12 aria-current:active:text-main-11;
+  }
+
+  code {
+    @apply bg-base-3 px-3xs py-3xs -my-3xs rounded-2xs text-base-12 before:content-['`'] after:content-['`'] font-medium;
+  }
+
+  strong {
+    @apply font-semibold text-base-12;
   }
 }
 

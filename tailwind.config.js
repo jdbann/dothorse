@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: { aria: { current: `current="page"` } },
     colors: {
+      revert: "revert",
       base: {
         1: "var(--slate-1)",
         2: "var(--slate-2)",
@@ -38,6 +39,7 @@ module.exports = {
       },
     },
     fontFamily: {
+      mono: "var(--font-ibm-plex-mono)",
       sans: "var(--font-ibm-plex-sans)",
       serif: [
         "var(--font-fraunces)",

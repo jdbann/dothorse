@@ -31,7 +31,7 @@ export default function PostPage(props: Props) {
     <article>
       <hgroup>
         <h1>{post.title}</h1>
-        <p className="lead">{post.lead}</p>
+        <p className="lead leading-normal">{post.lead}</p>
         <dl className="-text-1 italic cluster gap-3xs mt-3xs">
           <dt>Published:</dt>
           <dd>
