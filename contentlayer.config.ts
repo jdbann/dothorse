@@ -1,4 +1,6 @@
 import { defineDocumentType, makeSource } from "@contentlayer/source-files";
+import rehypeShiki from "@stefanprobst/rehype-shiki";
+import * as shiki from "shiki";
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -20,7 +22,13 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
-export default makeSource({
-  contentDirPath: "content/posts",
-  documentTypes: [Post],
+export default makeSource(async () => {
+  const highlighter = await shiki.getHighlighter({ theme: "css-variables" });
+  return {
+    contentDirPath: "content/posts",
+    documentTypes: [Post],
+    markdown: {
+      rehypePlugins: [[rehypeShiki, { highlighter }]],
+    },
+  };
 });
