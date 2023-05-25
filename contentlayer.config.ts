@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from "@contentlayer/source-files";
+import remarkTextr from "remark-textr";
 import rehypeShiki from "@stefanprobst/rehype-shiki";
 import * as shiki from "shiki";
 
@@ -28,6 +29,15 @@ export default makeSource(async () => {
     contentDirPath: "content/posts",
     documentTypes: [Post],
     markdown: {
+      remarkPlugins: [
+        [
+          remarkTextr,
+          {
+            options: { locale: "en-uk" },
+            plugins: ["typographic-base"],
+          },
+        ],
+      ],
       rehypePlugins: [[rehypeShiki, { highlighter }]],
     },
   };
