@@ -19,7 +19,7 @@ export default function PostsPage() {
           <li key={post._id}>
             <article>
               <h2 className="mb-3xs">
-                <Link href={post.path}>{post.title}</Link>
+                <Link href={`/posts/${post.slug}`}>{post.title}</Link>
               </h2>
               <p className="lead text-0">{post.lead}</p>
               <dl className="-text-1 italic cluster gap-3xs mt-3xs">

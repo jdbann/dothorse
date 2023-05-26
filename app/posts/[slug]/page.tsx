@@ -15,7 +15,7 @@ function findPost({ params: { slug } }: Props) {
 }
 
 export function generateMetadata(props: Props) {
-  const post = findPost(props)!;
+  const post = findPost(props);
 
   return { title: post.title, description: post.lead };
 }
