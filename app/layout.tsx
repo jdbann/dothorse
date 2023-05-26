@@ -38,7 +38,10 @@ export default function RootLayout({
 
           <main className="my-xl">{children}</main>
 
-          <footer className="-text-1 mt-auto">
+          <footer className="-text-1 mt-auto cluster">
+            <p className="mr-auto flex-shrink-0">
+              All content &copy; John Bannister 2023
+            </p>
             <nav>
               <ul>
                 <li>
