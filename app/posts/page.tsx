@@ -15,22 +15,24 @@ export default function PostsPage() {
       </hgroup>
 
       <ul>
-        {allPosts.map((post) => (
-          <li key={post._id}>
-            <article>
-              <h2 className="mb-3xs">
-                <Link href={`/posts/${post.slug}`}>{post.title}</Link>
-              </h2>
-              <p className="lead text-0">{post.lead}</p>
-              <dl className="-text-1 italic cluster gap-3xs mt-3xs">
-                <dt>Published:</dt>
-                <dd>
-                  <Time dateTime={post.publishedAt} />
-                </dd>
-              </dl>
-            </article>
-          </li>
-        ))}
+        {allPosts
+          .sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt))
+          .map((post) => (
+            <li key={post._id}>
+              <article>
+                <h2 className="mb-3xs">
+                  <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+                </h2>
+                <p className="lead text-0">{post.lead}</p>
+                <dl className="-text-1 italic cluster gap-3xs mt-3xs">
+                  <dt>Published:</dt>
+                  <dd>
+                    <Time dateTime={post.publishedAt} />
+                  </dd>
+                </dl>
+              </article>
+            </li>
+          ))}
       </ul>
     </article>
   );
