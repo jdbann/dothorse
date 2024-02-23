@@ -40,7 +40,7 @@ export default function RootLayout({
 
           <footer className="-text-1 mt-auto cluster">
             <p className="mr-auto flex-shrink-0">
-              All content &copy; John Bannister 2023
+              All content &copy; John Bannister 2024
             </p>
             <nav>
               <ul>

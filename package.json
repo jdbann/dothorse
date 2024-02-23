@@ -21,6 +21,7 @@
     "contentlayer": "^0.3.2",
     "eslint": "8.39.0",
     "eslint-config-next": "^13.4.0",
+    "feed": "^4.2.2",
     "next": "^13.4.0",
     "next-contentlayer": "^0.3.2",
     "postcss": "8.4.23",
