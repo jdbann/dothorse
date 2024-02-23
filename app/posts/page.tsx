@@ -4,6 +4,11 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Posts",
+  alternates: {
+    types: {
+      "application/rss+xml": "https://emailaddress.horse/posts/feed",
+    },
+  },
 };
 
 export default function PostsPage() {
